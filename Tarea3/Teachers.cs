@@ -7,21 +7,38 @@ namespace Tarea3
     class Teachers: IActors
     {
         //Propiedades de la clase
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Telephone { get; set; }
-        public double Salary { get; set; }
-        public string Subject { get; set; }
+        private string id;
+        private string name;
+        private string lastName;
+        private int telephone;
+        private double salary;
+        private string subject; 
 
         //Metodos de la clase
+        public void creator()
+        {
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.Write("Name: ");
+            name = Console.ReadLine();
+            Console.Write("Last Name: ");
+            lastName = Console.ReadLine();
+            Console.Write("Id: ");
+            id = Console.ReadLine();
+            Console.Write("Telephone: ");
+            telephone = int.Parse(Console.ReadLine());
+            Console.Write("Salary: ");
+            salary = double.Parse(Console.ReadLine());
+            Console.Write("Subject: ");
+            subject = Console.ReadLine();
+        }
         public string Teaching()
         {
             return "Software Developer";
         }
         public double lifeSure()
         {
-            return Salary * 0.3;
+            return salary * 0.3;
         }
         public string payment()
         {
@@ -31,8 +48,15 @@ namespace Tarea3
         //Impresion
         public override string ToString()
         {
-            return $"Id: {Id}\n Name: {Name}\n Last name: {LastName}\n Telephone: {Telephone}\n Salary: {Salary}\n " +
-                $"Subject: {Subject}";
+            return $"Id: {id}\nName: {name}\nLast name: {lastName}\nTelephone: {telephone}\nSalary: {salary}\n" +
+                $"Subject: {subject}";
+        }
+        public void Show()
+        {
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.WriteLine(ToString());
+            Console.WriteLine($"Teaching: {Teaching()}\nLife Sure: {lifeSure()}\nPayment: {payment()}");
         }
     }
 }

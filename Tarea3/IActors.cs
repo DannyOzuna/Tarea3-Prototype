@@ -6,6 +6,7 @@ namespace Tarea3
 {
     interface IActors
     {
-        double lifeSure();
+        void creator();
+        void Show();
     }
 }

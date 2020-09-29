@@ -6,7 +6,11 @@ namespace Tarea3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PrincipalContainer principal = new PrincipalContainer();
+            Console.WriteLine("WELCOME TO EDUCATIONAL CENTER ADMINISTRATION SYSTEM\n\n");
+            Console.WriteLine("\n\n8PRESS A KEY TO CONTINUOUS...");
+            Console.ReadKey();
+            principal.principalMenu();
         }
     }
 }

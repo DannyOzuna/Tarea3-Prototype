@@ -7,18 +7,34 @@ namespace Tarea3
 {
     class Students: IActors, IClone
     {
-        //Propiedades de la clase
-        public Parents Parents { get; set; }
-        public int Tuition { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
-        public string Course { get; set; }
+        //Atributos de la clase
+        private Parents parents;
+        private int tuition;
+        private string name;
+        private string lastName;
+        private int age;
+        private string course;
 
         //Metodo de la clase
-        public double lifeSure()
+        public void creator()
         {
-            return 0.0;
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.Write("Name: ");
+            name = Console.ReadLine();
+            Console.Write("Last Name: ");
+            lastName = Console.ReadLine();
+            Console.Write("Tuition: ");
+            tuition = int.Parse(Console.ReadLine());
+            Console.Write("Age: ");
+            age = int.Parse(Console.ReadLine());
+            Console.Write("Course: ");
+            course = Console.ReadLine();
+            parents = new Parents();
+            Console.Write("Parent: ");
+            parents.Name = Console.ReadLine();
+            Console.Write("Telephone: ");
+            parents.Telephone = int.Parse(Console.ReadLine());
         }
         public string arriveClass()
         {
@@ -34,17 +50,25 @@ namespace Tarea3
         public object clone()
         {
             Students clon = (Students)MemberwiseClone();
-            clon.Parents = new Parents();
-            clon.Parents.Name = Parents.Name;
-            clon.Parents.Telephone = Parents.Telephone;
+            clon.parents = new Parents();
+            clon.parents.Name = parents.Name;
+            clon.parents.Telephone = parents.Telephone;
             return clon;
         }
 
         //Impresion
         public override string ToString()
         {
-            return $"Tuition: {Tuition}\n Name: {Name}\n Last name: {LastName}\n Age: {Age}" +
-                $"Course: {Course}\n Parents: {Parents.Name}\n Telephone: {Parents.Telephone} ";
+            return $"Tuition: {tuition}\nName: {name}\nLast name: {lastName}\nAge: {age}\n" +
+                $"Course: {course}\nParents: {parents.Name}\nTelephone: {parents.Telephone} ";
+        }
+
+        public void Show()
+        {
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.WriteLine(ToString());
+            Console.WriteLine($"Arrive Class: {arriveClass()}\nScore: {score()}");
         }
 
     }

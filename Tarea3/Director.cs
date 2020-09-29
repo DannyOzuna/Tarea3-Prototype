@@ -9,15 +9,15 @@ namespace Tarea3
     class Director: IActors
     {
         //Referencia de la clase
-        private Director director = null;
+        private static Director director = null;
 
         //Propiedades de la clase
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Telephone { get; set; }
-        public double Salary { get; set; }
-        public int Account { get; set; }
+        private string id;
+        private string name;
+        private string lastName;
+        private int telephone;
+        private double salary;
+        private int account;
 
         //Constructor de la clase, privado para que no se pueda tener una instancia de la clase libremente
         private Director()
@@ -26,7 +26,7 @@ namespace Tarea3
         }
 
         //Metodo para obtener una sola instancia de la clase, aqui se esta aplicando el Singleton
-        public Director GetDirector()
+        public static Director GetDirector()
         {
             if (director == null)
             {
@@ -39,13 +39,30 @@ namespace Tarea3
         }
 
         //Metodos de la clase
+        public void creator()
+        {
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.Write("Name: ");
+            name = Console.ReadLine();
+            Console.Write("Last Name: ");
+            lastName = Console.ReadLine();
+            Console.Write("Id: ");
+            id = Console.ReadLine();
+            Console.Write("Telephone: ");
+            telephone = int.Parse(Console.ReadLine());
+            Console.Write("Salary: ");
+            salary = double.Parse(Console.ReadLine());
+            Console.Write("Account: ");
+            account = int.Parse(Console.ReadLine());
+        }
         public double commission()
         {
-            return Salary * 0.2;
+            return salary * 0.2;
         }
         public double lifeSure()
         {
-            return Salary * 0.1;
+            return salary * 0.1;
         }
         public string payment()
         {
@@ -55,8 +72,15 @@ namespace Tarea3
         //Impresion
         public override string ToString()
         {
-            return $"Id: {Id}\n Name: {Name}\n Last name: {LastName}\n Telephone: {Telephone}\n Salary: {Salary}\n " +
-                $"Account: {Account}";
+            return $"Id: {id}\nName: {name}\nLast name: {lastName}\nTelephone: {telephone}\nSalary: {salary}\n" +
+                $"Account: {account}";
+        }
+        public void Show()
+        {
+            Console.Clear();
+            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
+            Console.WriteLine(ToString());
+            Console.WriteLine($"Commission: {commission()}\nLife Sure: {lifeSure()}\nPayment: {payment()}");
         }
     }
 }
