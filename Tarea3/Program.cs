@@ -8,7 +8,7 @@ namespace Tarea3
         {
             PrincipalContainer principal = new PrincipalContainer();
             Console.WriteLine("WELCOME TO EDUCATIONAL CENTER ADMINISTRATION SYSTEM\n\n");
-            Console.WriteLine("\n\n8PRESS A KEY TO CONTINUOUS...");
+            Console.WriteLine("\n\nPRESS A KEY TO CONTINUOUS...");
             Console.ReadKey();
             principal.principalMenu();
         }

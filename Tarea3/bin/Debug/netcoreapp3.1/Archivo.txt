@@ -1,0 +1,35 @@
+ORIGINAL
+
+Tuition: 20197992
+Name: Danny 
+Last name: Ozuna Vasquez 
+Age: 18
+Course: Informatica
+Parents: Raquelina
+Telephone: 8097798457
+Arrive Class: School Bus
+Score: 100
+
+CLONE 1
+
+Tuition: 20208478
+Name: Alejandro 
+Last name: Ozuna
+Age: 12
+Course: Contabilidad 
+Parents: Agustin
+Telephone: 809798745
+Arrive Class: School Bus
+Score: 100
+
+CLONE 2
+
+Tuition: 20179878
+Name: Lisandro 
+Last name: Santos 
+Age: 16
+Course: Mercadeo 
+Parents: Josefina
+Telephone: 82978547
+Arrive Class: School Bus
+Score: 100

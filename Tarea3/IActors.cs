@@ -7,6 +7,6 @@ namespace Tarea3
     interface IActors
     {
         void creator();
-        void Show();
+        string Show();
     }
 }

@@ -12,7 +12,7 @@ namespace Tarea3
             switch (actor)
             {
                 case 1:
-                    return new Students();
+                    return null;
                 case 2:
                     return new Teachers();
                 case 3:

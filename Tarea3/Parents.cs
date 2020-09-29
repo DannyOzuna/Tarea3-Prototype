@@ -10,7 +10,7 @@ namespace Tarea3
         public int Indentification { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public int Telephone { get; set; }
+        public long Telephone { get; set; }
         public double Salary { get; set; }
         public int Account { get; set; }
 
@@ -26,7 +26,7 @@ namespace Tarea3
             Console.Write("Indentification: ");
             Indentification = int.Parse(Console.ReadLine());
             Console.Write("Telephone: ");
-            Telephone = int.Parse(Console.ReadLine());
+            Telephone = Convert.ToInt64(Console.ReadLine());
             Console.Write("Salary: ");
             Salary = double.Parse(Console.ReadLine());
             Console.Write("Account: ");
@@ -46,17 +46,10 @@ namespace Tarea3
         }
 
         //Impresion
-        public override string ToString()
+        public string Show()
         {
             return $"Identification: {Indentification}\nName: {Name}\nLast name: {LastName}\nTelephone: {Telephone}\nSalary: {Salary}\n" +
-                $"Account: {Account}";
-        }
-        public void Show()
-        {
-            Console.Clear();
-            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
-            Console.WriteLine(ToString());
-            Console.WriteLine($"Commission: {commission()}\nLife Sure: {lifeSure()}\nPayment: {payment()}");
+                $"Account: {Account}\nCommission: {commission()}\nLife Sure: {lifeSure()}\nPayment: {payment()}";
         }
     }
 }

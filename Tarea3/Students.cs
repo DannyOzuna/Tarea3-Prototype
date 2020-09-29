@@ -18,9 +18,8 @@ namespace Tarea3
         //Metodo de la clase
         public void creator()
         {
-            Console.Clear();
-            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
-            Console.Write("Name: ");
+            Console.WriteLine("*------EDUCATION SYSTEM------*");
+            Console.Write("\nName: ");
             name = Console.ReadLine();
             Console.Write("Last Name: ");
             lastName = Console.ReadLine();
@@ -34,7 +33,7 @@ namespace Tarea3
             Console.Write("Parent: ");
             parents.Name = Console.ReadLine();
             Console.Write("Telephone: ");
-            parents.Telephone = int.Parse(Console.ReadLine());
+            parents.Telephone = Convert.ToInt64(Console.ReadLine());
         }
         public string arriveClass()
         {
@@ -57,19 +56,11 @@ namespace Tarea3
         }
 
         //Impresion
-        public override string ToString()
+        public string Show()
         {
             return $"Tuition: {tuition}\nName: {name}\nLast name: {lastName}\nAge: {age}\n" +
-                $"Course: {course}\nParents: {parents.Name}\nTelephone: {parents.Telephone} ";
+                $"Course: {course}\nParents: {parents.Name}\nTelephone: {parents.Telephone}\n" +
+                $"Arrive Class: {arriveClass()}\nScore: {score()}";
         }
-
-        public void Show()
-        {
-            Console.Clear();
-            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
-            Console.WriteLine(ToString());
-            Console.WriteLine($"Arrive Class: {arriveClass()}\nScore: {score()}");
-        }
-
     }
 }

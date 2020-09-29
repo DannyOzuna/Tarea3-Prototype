@@ -46,17 +46,10 @@ namespace Tarea3
         }
 
         //Impresion
-        public override string ToString()
+        public string Show()
         {
             return $"Id: {id}\nName: {name}\nLast name: {lastName}\nTelephone: {telephone}\nSalary: {salary}\n" +
-                $"Position: {position}";
-        }
-        public void Show()
-        {
-            Console.Clear();
-            Console.WriteLine("*------EDUCATION SYSTEM------*\n");
-            Console.WriteLine(ToString());
-            Console.WriteLine($"Functionality: {functionality()}\nLife Sure: {lifeSure()}\nPayment: {payment()}");
+                $"Position: {position}\nFunctionality: {functionality()}\nLife Sure: {lifeSure()}\nPayment: {payment()}";
         }
     }
 }
