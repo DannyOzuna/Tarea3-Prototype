@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danny\\Desktop\\Tarea3\\Tarea3\\Tarea3.csproj": {}
+    "C:\\Users\\danny\\OneDrive\\Documentos\\Patrones de Diseño\\Tarea3 Prototype\\Tarea3\\Tarea3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danny\\Desktop\\Tarea3\\Tarea3\\Tarea3.csproj": {
+    "C:\\Users\\danny\\OneDrive\\Documentos\\Patrones de Diseño\\Tarea3 Prototype\\Tarea3\\Tarea3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danny\\Desktop\\Tarea3\\Tarea3\\Tarea3.csproj",
+        "projectUniqueName": "C:\\Users\\danny\\OneDrive\\Documentos\\Patrones de Diseño\\Tarea3 Prototype\\Tarea3\\Tarea3.csproj",
         "projectName": "Tarea3",
-        "projectPath": "C:\\Users\\danny\\Desktop\\Tarea3\\Tarea3\\Tarea3.csproj",
+        "projectPath": "C:\\Users\\danny\\OneDrive\\Documentos\\Patrones de Diseño\\Tarea3 Prototype\\Tarea3\\Tarea3.csproj",
         "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danny\\Desktop\\Tarea3\\Tarea3\\obj\\",
+        "outputPath": "C:\\Users\\danny\\OneDrive\\Documentos\\Patrones de Diseño\\Tarea3 Prototype\\Tarea3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",

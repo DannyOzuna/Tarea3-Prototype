@@ -30,12 +30,10 @@ namespace Tarea3
         {
             if (director == null)
             {
-                return new Director();
+                director = new Director();
             }
-            else
-            {
-                return director;
-            }
+
+            return director;
         }
 
         //Metodos de la clase
